@@ -1,5 +1,5 @@
 #zips2fips
-Simple script to read in a CSV with the column "full_adress" and append FIPS codes with confidence scores to a new CSV.
+Simple script to read in a CSV with the column "full_address" and append FIPS codes with confidence scores to a new CSV.
 
 ##Requirements
 To run zips2fips, you'll need to import the [Data Science Toolkit](http://www.datasciencetoolkit.org/developerdocs#street2coordinates).
