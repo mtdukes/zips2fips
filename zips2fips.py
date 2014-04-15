@@ -3,8 +3,6 @@ import csv, argparse, re
 
 def get_fips(csv_path):
 	#initialize csv file
-	#fips_file = csv.writer(open('fips_file.csv','wb'))
-	#fips_file.writerow(['address', 'fips', 'confidence'])
 	with open(csv_path, 'r') as csv_input:
 		#strip out directory, if it exists
 		loc = re.sub(r'(^.*\/)','',csv_path)
@@ -46,15 +44,6 @@ def get_fips(csv_path):
 						item.append('')
 					#fips_file.writerow([r,r_dict['fips_county'],str(r_dict['confidence'])])
 				writer.writerow(item)
-
-	#iterate through multi-layer dict to find 'fips_county' and 'confidence'
-	#for r in raw:
-	#	r_dict = raw[r]
-		#add 'fips_county' and 'confidence' to csv
-	#	fips_file.writerow([r,r_dict['fips_county'],str(r_dict['confidence'])])
-
-		#Debug progress
-		#print "FIPS: " + r_dict['fips_county'] + " | " + "Confidence: " + str(r_dict['confidence'])
 
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser(description='Convert full address to FIPS code. Eventually: CSV path')
