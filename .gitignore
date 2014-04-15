@@ -1,0 +1,6 @@
+#Ignore these directories
+data
+
+#ignore these files
+.DS_Store
+fips_*
